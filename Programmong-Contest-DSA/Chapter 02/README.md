@@ -17,6 +17,11 @@
 - [Exercise 08](#exercise-08)
 - [Exercise 09](#exercise-09)
 - [Exercise 10](#exercise-10)
+- [Exercise 11](#exercise-11)
+- [Exercise 12](#exercise-12)
+- [Exercise 13](#exercise-13)
+- [Exercise 14](#exercise-14)
+- [Timus 1068](#timus-1068)
 ### Timus 1000
 <div style="text-align: center; margin-bottom: 20px;">
     <h3>A+B Problem</h3>
