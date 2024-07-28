@@ -2,6 +2,10 @@
 - [simple code](code_02_01_simple_code.cpp)
 - [simple input](code_02_02_simple_input.cpp)
 - [circle area](code_02_03_circle_area.cpp)
+- [simple if](code_02_04_simple_if.cpp)
+- [odd even](code_02_05_odd_even.cpp)
+- [leap year](code_02_06_leap_year.cpp)
+- [leap year2](code_02_07_leap_year2.cpp)
 ## অনুশীলনী
 - [Timus 1000](#timus-1000)
 - [Timus 1264](#timus-1264)
@@ -294,5 +298,121 @@
 <br>
 
 [Solution](Exercises/ex_02_10_exercise_10.cpp)
+
+---
+
+### Exercise 11
+<div style="margin-bottom: 20px;">
+    <h5>প্যালিনড্রম (palindrome) হলো সেই জিনিস যা সামনে থেকে পড়তেও যা, পেছন থেকে পড়তেও তা। যেমন কিছু প্যালিনড্রম সংখ্যা হলোঃ 1, 2, 3, ...9, 11, 22, 33, ...99, 101, 111, 121, .... তোমাকে n তম প্যালিনড্রম সংখ্যা প্রিন্ট করতে হবে। (n < 100) </h5>
+</div>
+
+- **Input**: The program prompts the user to input a number `n` which should be between 1 and 99.
+- **Calculation**: `while (count < n)`: Loop until the nth palindrome is found:
+    - **Reverse the Number**:
+        - Use a `while` loop to reverse the digits of `current`.
+        - `remainder = num % 10`: Get the last digit.
+        - `reversed = reversed * 10 + remainder`: Construct the reversed number.
+        - `num /= 10`: Remove the last digit.
+    - **Check if the Number is a Palindrome**:
+        - Compare the reversed number with the original number.
+        - If they are equal, increment the `count`.
+
+- **Output**: When the count reaches `n`, print the `n`th palindrome number and exit the loop.
+
+<br>
+
+[Solution](Exercises/ex_02_11_exercise_11.cpp)
+
+---
+
+### Exercise 12
+<div style="margin-bottom: 20px;">
+    <h5>n এর মান দেওয়া আছে, তোমাকে <strong>Σ i * (n - i + 1) = i * n + 2 * (n - 1) + ... + n * 1</strong> এর মান বের করতে হবে। (এটা কিন্তু else-if এর প্র্যাক্সটিস প্রবলেম)</h5>
+</div>
+
+- **Input**: The program prompts the user to input an integer number `n`.
+- **Calculation**: The program checks if n is greater than 0. If not, it asks the user to enter a positive integer. The summation can be expressed as:
+
+    $$
+    \sum_{i=1}^{n} i \cdot (n - i + 1) = i \cdot n + 2 \cdot (n - 1) + \ldots + n \cdot 1
+    $$
+
+    - A `for` loop iterates from `i = 1` to `i = n`.
+    - For each value of `i`, the term `i * (n - i + 1)` is computed and added to the `sum`.
+
+- **Output**: After computing the sum, the result is printed.
+
+<br>
+
+[Solution](Exercises/ex_02_12_exercise_12.cpp)
+
+---
+
+### Exercise 13
+<div style="margin-bottom: 20px;">
+    <h5>দুটি সংখ্যার মধ্যে কোনটি বড় প্রিন্ট কর। এর পরে তিনটি সংখ্যার জন্যও চেষ্টা করে দেখ।</h5>
+</div>
+
+- **Input**: The program prompts the user to input an integer numbers.
+- **Calculation**: The program checks using `if-else` statements determine which number is greater or if they are equal.
+- **Output**: After computing the greater integer number, the result is printed.
+
+<br>
+
+[Solution](Exercises/ex_02_13_exercise_13.cpp)
+
+---
+
+### Exercise 14
+<div style="margin-bottom: 20px;">
+    <h5>একটি স্থানাংক দেওয়া আছে, তোমাকে বলতে হবে সেটা কোন quadrant এ পরে।</h5>
+</div>
+
+- **Input**: The user inputs the coordinates `x` and `y`.
+- **Calculation**: Quadrant, Axis and Origin Determination:
+   - **Quadrant I**: Both `x` and `y` are positive.
+   - **Quadrant II**: `x` is negative and `y` is positive.
+   - **Quadrant III**: Both `x` and `y` are negative.
+   - **Quadrant IV**: `x` is positive and `y` is negative.
+   - **Y-axis**: `x` is 0 and `y` is not 0.
+   - **X-axis**: `y` is 0 and `x` is not 0.
+   - **Origin**: Both `x` and `y` are 0.
+
+- **Output**: After identifying the location of the point based on its coordinates, the result is printed.
+
+<br>
+
+[Solution](Exercises/ex_02_14_exercise_14.cpp)
+
+---
+
+### Timus 1068
+<div style="text-align: center; margin-bottom: 20px;">
+    <h3>Sum</h3>
+    <p><strong>Time limit:</strong> 2.0 second</p>
+    <p><strong>Memory limit:</strong> 64 MB</p>
+</div>
+
+<div>
+    <p>Your task is to find the sum of all integer numbers lying between 1 and N inclusive.</p>
+    <h4>Input</h4>
+    <p>The input consists of a single integer N that is not greater than 10000 by it's absolute value.</p>
+    <h4>Output</h4>
+    <p>Write a single integer number that is the sum of all integer numbers lying between 1 and N inclusive.</p>
+    <h4>Sample</h4>
+    <table style="width: 100%; border-collapse: collapse; margin: 0 auto;">
+        <tr>
+            <th style="border: 1px solid gray; padding: 8px; text-align: center;">Input</th>
+            <th style="border: 1px solid gray; padding: 8px; text-align: center;">Output</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid gray; padding: 8px;">-3</td>
+            <td style="border: 1px solid gray; padding: 8px;">-5</td>
+        </tr>
+    </table>
+</div>
+<br>
+
+[Solution](Exercises/ex_02_15_timus_1068.cpp)
 
 ---
