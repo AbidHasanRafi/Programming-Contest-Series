@@ -6,6 +6,10 @@
 - [odd even](code_02_05_odd_even.cpp)
 - [leap year](code_02_06_leap_year.cpp)
 - [leap year2](code_02_07_leap_year2.cpp)
+- [simple loop](code_02_08_simple_loop.cpp)
+- [simple loop2](code_02_09_simple_loop2.cpp)
+- [simple loop3](code_02_10_simple_loop3.cpp)
+- [simple loop4](code_02_11_simple_loop4.cpp)
 ## অনুশীলনী
 - [Timus 1000](#timus-1000)
 - [Timus 1264](#timus-1264)
@@ -22,6 +26,13 @@
 - [Exercise 13](#exercise-13)
 - [Exercise 14](#exercise-14)
 - [Timus 1068](#timus-1068)
+- [Exercise 16](#exercise-16)
+- [Exercise 17](#exercise-17)
+- [Exercise 18](#exercise-18)
+- [Exercise 19](#exercise-19)
+- [Exercise 20](#exercise-20)
+- [Exercise 21](#exercise-21)
+- [Exercise 22](#exercise-22)
 ### Timus 1000
 <div style="text-align: center; margin-bottom: 20px;">
     <h3>A+B Problem</h3>
@@ -419,5 +430,279 @@
 <br>
 
 [Solution](Exercises/ex_02_15_timus_1068.cpp)
+
+---
+
+### Exercise 16
+<div style="margin-bottom: 20px;">
+    <h5>নিচের সিরিজগুলো কোড লিখে সমাধান করঃ</h5>
+    <ol>
+        <strong><li> 1 + 2 + 3 + .... + n </li></strong>
+        <strong><li> 1<sup>2</sup> + 2<sup>2</sup> + 3<sup>2</sup> + ... + n<sup>2</sup> </li></strong>
+        <strong><li> 1<sup>3</sup> + 2<sup>3</sup> + 3<sup>3</sup> + ... + n<sup>3</sup> </li></strong>
+        <strong><li> 1 + (2 +3) + (4 + 5 + 6) + ... + nth term </li></strong>
+        <strong><li> 1 - 2 + 3 - 4 + 5 ... nth term </li></strong>
+        <strong><li> 1 + (2 + 3 * 4) + (5 + 6*7 + 8*9*10) + ... + nth term </li></strong>
+        <strong><li> 1*n + 2*(n - 1) + ... + n*1 </li></strong>
+    </ol>
+</div>
+
+- **Input**: The program prompts the user to input a number `n`.
+- **Calculation**:
+    1. **Sum of Natural Numbers**: Uses the formula `n * (n + 1) / 2`
+    2. **Sum of Squares**: Uses the formula `n * (n + 1) * (2 * n + 1) / 6`
+    3. **Sum of Cubes**: Is calculated as the square of the sum of natural numbers.
+    4. **Sum of Series**: Calculates the sum of series `1 + (2 + 3) + (4 + 5 + 6) + ...`
+    5. **Alternating Sum**: Computes `1 - 2 + 3 - 4 + ...`
+    6. **Complex Series**: Adds products of increasing sequences
+    7. **Weighted Sum**: Calculates `1*n + 2*(n-1) + ... + n*1`
+
+- **Output**: The program prints the series.
+
+<br>
+
+[Solution](Exercises/ex_02_16_exercise_16.cpp)
+
+---
+
+### Exercise 17
+<div style="margin-bottom: 20px;">
+    <h5>n ইনপুটের জন্য পিরামিডগুলো প্রিন্ট করঃ</h5>
+    <ol>
+    <li>
+        <p><strong>Pattern 1:</strong></p>
+        <pre>
+*
+**
+***
+        </pre>
+    </li>
+    <li>
+        <p><strong>Pattern 2:</strong></p>
+        <pre>
+***
+ **
+  *
+        </pre>
+    </li>
+    <li>
+        <p><strong>Pattern 3:</strong></p>
+        <pre>
+  *
+ ***
+*****
+        </pre>
+    </li>
+    <li>
+        <p><strong>Pattern 4:</strong></p>
+        <pre>
+12321
+ 121 
+  1
+        </pre>
+    </li>
+    <li>
+        <p><strong>Pattern 5:</strong></p>
+        <pre>
+  *
+ ***
+*****
+ ***
+  *
+        </pre>
+    </li>
+    <li>
+        <p><strong>Pattern 6:</strong></p>
+        <pre>
+  1  
+ 121 
+12321
+ 121 
+  1
+        </pre>
+    </li>
+</ol>
+
+</div>
+
+- **Input**: The program prompts the user to input a number `n`.
+- **Calculation**:
+    1. **Pattern 1: Right-angled Triangle**
+        - Iterates from `1` to `n`, printing `i` stars for each line.
+
+    2. **Pattern 2: Inverted Right-angled Triangle (aligned to the right)**
+        - **Leading Spaces**: Print `n - i` spaces before the stars to align them to the right.
+        - **Stars**: Print `i` stars for each row, where `i` decreases from `n` to `1`.
+
+    3. **Pattern 3: Centered Pyramid**
+        - Prints spaces followed by stars to form a centered pyramid, where the number of stars increases and the number of spaces decreases.
+
+    4. **Pattern 4 (Inverted Centered Pyramid)**:
+        - Print leading spaces to center the numbers.
+        - Print numbers incrementally from `1` to `i` and then decrement back to `1`.
+
+    5. **Pattern 5: Diamond Shape**
+        - First prints the upper pyramid part, then prints the lower inverted pyramid part to form a diamond shape.
+
+    6. **Pattern 6 (Diamond Shaped with Numbers)**:
+        - Print numbers in a diamond shape. For each row, print numbers incrementally up to `i`, then decrement back down, with appropriate leading spaces.
+
+- **Output**: The program prints the patterns.
+
+<br>
+
+[Solution](Exercises/ex_02_17_exercise_17.cpp)
+
+---
+
+### Exercise 18
+<div style="margin-bottom: 20px;">
+    <h5>প্যালিনড্রম (palindrome) হলো সেই জিনিস যা সামনে থেকে পড়তেও যা, পেছন থেকে পড়তেও তা। যেমন কিছু প্যালিনড্রম সংখ্যা হলোঃ 1, 2, 3, ...9, 11, 22, 33, ...99, 101, 111, 121, .... তোমাকে n তম প্যালিনড্রম সংখ্যা প্রিন্ট করতে হবে। (n < 10<sup>9</sup>) </h5>
+</div>
+
+- **Input**: The program prompts the user to input a number `n` which should be between 1 and 10<sup>9</sup>.
+- **Calculation**: `while (count < n)`: Loop until the nth palindrome is found:
+    - **Reverse the Number**:
+        - Use a `while` loop to reverse the digits of `current`.
+        - `remainder = num % 10`: Get the last digit of `num`.
+        - `reversed = reversed * 10 + remainder`: Construct the reversed number by appending the last digit.
+        - `num /= 10`: Remove the last digit from `num`.
+    - **Check if the Number is a Palindrome**:
+        - Compare the reversed number (`reversed`) with the original number (`original`).
+        - If they are equal, it means `current` is a palindrome.
+        - Increment the `count` of palindromes found.
+        - If `count` reaches `n`, print the nth palindrome and exit the loop.
+
+- **Output**: When the count reaches `n`, print the `n`th palindrome number and exit the loop.
+
+<br>
+
+[Solution](Exercises/ex_02_18_exercise_18.cpp)
+
+---
+
+### Exercise 19
+<div style="margin-bottom: 20px;">
+    <h5>কোনো একটি সংখ্যা n মৌলিক (prime) হবে যদি সেটি 1 থেকে বড় হয় এবং 1 বা n ছাড়া আর কোনো ধনাত্মক সংখ্যা দিয়ে বিভাজ্য না হয়। তোমাকে n দেওয়া আছে বলতে হবে এটি মৌলিক কি মৌলিক নয়।</h5>
+</div>
+
+- **Input**: The program prompts the user to input a number `n`.
+- **Calculation**:
+<ul>
+    <li>
+        <p>Special Case Handling</p>
+        <ul>
+            <li>If <i>n</i> is less than or equal to 1, it is not considered a prime number.</li>
+        </ul>
+    </li>
+    <li>
+        <p>Prime Checking</p>
+        <ul>
+            <li>For numbers greater than 1:</li>
+            <ul>
+                <li>Iterate from 2 up to <i>&#8730;n</i> (square root of <i>n</i>).</li>
+                <li>If <i>n</i> is divisible by any number in this range, then <i>n</i> is not a prime number.</li>
+            </ul>
+        </ul>
+    </li>
+</ul>
+
+
+- **Output**: Based on the result, print whether the number is prime or not.
+
+<br>
+
+[Solution](Exercises/ex_02_19_exercise_19.cpp)
+
+---
+
+### Exercise 20
+<div style="margin-bottom: 20px;">
+    <h5>n! (n ফ্যাক্টোরিয়াল) নির্ণয় কর।</h5>
+</div>
+
+- **Input**: The program prompts the user to input a number `n`.
+- **Calculation**:
+ - Negative Input Check
+    - The program checks if the input is negative.
+    - If the input is negative, it prints an error message.
+
+ - Calculate Factorial
+    - A `for` loop iterates from 1 to \( n \).
+    - During each iteration, the `factorial` variable is multiplied by the current loop index.
+
+- **Output**: Based on the result, the output is printed.
+
+<br>
+
+[Solution](Exercises/ex_02_20_exercise_20.cpp)
+
+---
+
+### Exercise 21
+<div style="margin-bottom: 20px;">
+    <h5>
+    n ও r দেওয়া আছে, তোমাকে <sup>n</sup>C<sub>r</sub> =
+    <span style="display: inline-block; vertical-align: middle;">n!</span>
+    <span style="display: inline-block; vertical-align: middle;"> / </span>
+    <span style="display: inline-block; vertical-align: middle;">r! &middot; (n - r)!</span> প্রিন্ট করতে হবে।
+</h5>
+</div>
+
+- **Input**: The program prompts the user to input `n` and `r`.
+- **Calculation**:
+<ol>
+    <li>Compute Factorials
+        <ul>
+            <li>The factorials of <i>n</i>, <i>r</i>, and <i>n - r</i> are computed.</li>
+        </ul>
+    </li>
+    <li>Calculate <i>nCr</i>
+        <ul>
+            <li>The value of <i>nCr</i> is then calculated using the formula:</li>
+        </ul>
+        <p style="text-align: center;">
+            <span style="display: inline-block; vertical-align: middle; border-top: 1px solid; width: 0;"></span>
+            <span style="display: inline-block; vertical-align: middle; border-bottom: 1px solid; width: 0;"></span>
+            <span style="display: inline-block; vertical-align: middle;">n!</span>
+            <span style="display: inline-block; vertical-align: middle;"> / </span>
+            <span style="display: inline-block; vertical-align: middle; border-top: 1px solid; width: 0;"></span>
+            <span style="display: inline-block; vertical-align: middle; border-bottom: 1px solid; width: 0;"></span>
+            <span style="display: inline-block; vertical-align: middle;">r! &middot; (n - r)!</span>
+        </p>
+    </li>
+</ol>
+
+- **Output**: Based on the result, the output is printed.
+
+<br>
+
+[Solution](Exercises/ex_02_21_exercise_21.cpp)
+
+---
+
+### Exercise 22
+<div style="margin-bottom: 20px;">
+    <h5>x ও n দেওয়া আছে, তোমাকে cos(x) এর মান ম্যাকলরিনের ধারা (maclaurine series) এর সাহায্যে বের করতে হবে। cos(x) এর ধারাটি হচ্ছে 1 - (x<sup>2</sup> / 2!) + (x<sup>4</sup> / 4!) + ... + nth term</h5>
+</div>
+
+- **Input**: The program prompts the user to input `x` and `n`.
+- **Calculation**:
+  - **Factorial Calculation**: Computes the factorial for each term in the series.
+  - **Term Calculation**: Computes each term of the series using the formula (-1)<sup>i</sup> &middot; 
+<span style="display: inline-block; vertical-align: middle; border-top: 1px solid; width: 0;"></span>
+<span style="display: inline-block; vertical-align: middle; border-bottom: 1px solid; width: 0;"></span>
+<span style="display: inline-block; vertical-align: middle;">x<sup>2i</sup></span> 
+<span style="display: inline-block; vertical-align: middle;">/</span>
+<span style="display: inline-block; vertical-align: middle; border-top: 1px solid; width: 0;"></span>
+<span style="display: inline-block; vertical-align: middle; border-bottom: 1px solid; width: 0;"></span>
+<span style="display: inline-block; vertical-align: middle;">(2i)!</span>.
+
+
+- **Output**: Based on the result, the output is printed.
+
+<br>
+
+[Solution](Exercises/ex_02_22_exercise_22.cpp)
 
 ---
