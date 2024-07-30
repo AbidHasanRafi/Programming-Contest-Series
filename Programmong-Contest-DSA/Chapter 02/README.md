@@ -33,6 +33,17 @@
 - [Exercise 20](#exercise-20)
 - [Exercise 21](#exercise-21)
 - [Exercise 22](#exercise-22)
+- [Timus 1083](#timus-1083)
+- [Timus 1086](#timus-1086)
+- [Timus 1209](#timus-1209)
+- [LightOJ 1001](#lightoj-1001)
+- [LightOJ 1008](#lightoj-1008)
+- [LightOJ 1010](#lightoj-1010)
+- [LightOJ 1015](#lightoj-1015)
+- [LightOJ 1022](#lightoj-1022)
+- [LightOJ 1053](#lightoj-1053)
+- [LightOJ 1069](#lightoj-1069)
+- [LightOJ 1072](#lightoj-1072)
 ### Timus 1000
 <div style="text-align: center; margin-bottom: 20px;">
     <h3>A+B Problem</h3>
@@ -704,5 +715,520 @@
 <br>
 
 [Solution](Exercises/ex_02_22_exercise_22.cpp)
+
+---
+
+### Timus 1083
+<div style="text-align: center; margin-bottom: 20px;">
+    <h3>Factorials!!!</h3>
+    <p><strong>Time limit:</strong> 1.0 second</p>
+    <p><strong>Memory limit:</strong> 64 MB</p>
+</div>
+
+<div>
+    <p><strong>Definition 1.</strong> n!!…! = n(n−k)(n−2k)…(n mod k), if k doesn’t divide n; n!!…! = n(n−k)(n−2k)…k, if k divides n (There are k marks ! in the both cases).</p>
+    <p><strong>Definition 2.</strong> X mod Y — a remainder after division of X by Y.</p>
+    <p>For example, 10 mod 3 = 1; 3! = 3·2·1; 10!!! = 10·7·4·1.</p>
+    <p>Given numbers n and k we have calculated a value of the expression in the first definition. Can you do it as well?</p>
+    <h4>Input</h4>
+    <p>contains the only line: one integer <em>n</em>, <em>1 ≤ n ≤ 10</em>, then exactly one space, then k exclamation marks, <em>1 ≤ k ≤ 20</em>.</p>
+    <h4>Output</h4>
+    <p>contains one number — <em>n</em>!!…! (there are <em>k</em> marks ! here).</p>
+    <h4>Sample</h4>
+    <table style="width: 100%; border-collapse: collapse; margin: 0 auto;">
+        <tr>
+            <th style="border: 1px solid gray; padding: 8px; text-align: center;">Input</th>
+            <th style="border: 1px solid gray; padding: 8px; text-align: center;">Output</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid gray; padding: 8px;">9 !!</td>
+            <td style="border: 1px solid gray; padding: 8px;">945</td>
+        </tr>
+    </table>
+</div>
+<br>
+
+[Solution](Exercises/ex_02_23_timus_1083.cpp)
+
+---
+
+### Timus 1086
+<div style="text-align: center; margin-bottom: 20px;">
+    <h3>Cryptography</h3>
+    <p><strong>Time limit:</strong> 2.0 second</p>
+    <p><strong>Memory limit:</strong> 64 MB</p>
+</div>
+
+<div>
+    <p>While preparing this problem set the jury has run into the following problem: it was necessary to send by e-mail the texts of the problems. As it is well known, e-mail is not reliable, messages are sent not enciphered, there is a danger that someone can intercept them. The members of the program committee wanted no participant know the texts of the problems before the start of the contest. That's why they resorted to cryptography methods in order to save the texts of the problems from an unsanctioned reading. The jury gas worked up a new way of enciphering of a text. It is not patented yet, so it's kept secret. However, we'll reveal you one secret: the new algorithm is based on the work with prime numbers. In particular, in uses a calculation of n-th by order prime number.</p>
+    <p>Several members of the program committee independently have worked up programs that make such calculations, but these programs produce different answers. Each one of the programmers is sure that his program works correctly. That's why the jury has reached the deadlock and can't continue working. The contest is about not to take place.</p>
+    <p>You are to help to the jury and to save the contest. We want you to write a program that calculates the n-th by order prime number. The main thing is that your program should work correctly.</p>
+    <h4>Input</h4>
+    <p>First line contains a positive integer <em>k</em>. Then <em>k</em> positive integers follow (one in each line). The numbers don't exceed 15000.</p>
+    <h4>Output</h4>
+    <p>For each number <em>n</em> you should output the <em>n</em>-th by order prime number. Each number should be in its line.</p>
+    <h4>Sample</h4>
+    <table style="width: 100%; border-collapse: collapse; margin: 0 auto;">
+        <tr>
+            <th style="border: 1px solid gray; padding: 8px; text-align: center;">Input</th>
+            <th style="border: 1px solid gray; padding: 8px; text-align: center;">Output</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid gray; padding: 8px;">
+                <p>4</p> 
+                <p>3</p> 
+                <p>2</p> 
+                <p>5</p> 
+                <p>7</p> 
+            </td>
+            <td style="border: 1px solid gray; padding: 8px;">                
+                <p>5</p> 
+                <p>3</p> 
+                <p>11</p> 
+                <p>17</p> 
+                <p>&nbsp;</p> 
+            </td>
+        </tr>
+    </table>
+    <h4>Notes</h4>
+    <p>The <em>prime number</em> is a positive integer that has exactly two different positive divisors, i.e. 1 is not a prime number.</p>
+</div>
+<br>
+
+[Solution](Exercises/ex_02_24_timus_1086.cpp)
+
+---
+
+### Timus 1209
+<div style="text-align: center; margin-bottom: 20px;">
+    <h3>1, 10, 100, 1000...</h3>
+    <p><strong>Time limit:</strong> 1.0 second</p>
+    <p><strong>Memory limit:</strong> 64 MB</p>
+</div>
+
+<div>
+    <p>Let's consider an infinite sequence of digits constructed of ascending powers of 10 written one after another. Here is the beginning of the sequence: 110100100010000… You are to find out what digit is located at the definite position of the sequence.</p>
+    <h4>Input</h4>
+    <p>There is the only integer <em>N</em> in the first line (<em>1 ≤ N ≤ 65535</em>). The <em>i</em>-th of <em>N</em> left lines contains the integer <em>K<sub>i</sub></em> — the number of position in the sequence (<em>1 ≤ K<sub>i</sub> ≤ 2<sup>31</sup> − 1</em>).</p>
+    <h4>Output</h4>
+    <p>You are to output <em>N</em> digits 0 or 1 separated with a space. More precisely, the <em>i</em>-th digit of output is to be equal to the <em>K<sub>i</sub></em>-th digit of described above sequence.</p>
+    <h4>Sample</h4>
+    <table style="width: 100%; border-collapse: collapse; margin: 0 auto;">
+        <tr>
+            <th style="border: 1px solid gray; padding: 8px; text-align: center;">Input</th>
+            <th style="border: 1px solid gray; padding: 8px; text-align: center;">Output</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid gray; padding: 8px;">
+                <p>4</p> 
+                <p>3</p> 
+                <p>14</p> 
+                <p>7</p> 
+                <p>6</p> 
+            </td>
+            <td style="border: 1px solid gray; padding: 8px;">
+            <p>0 0 1 0</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            </td>
+        </tr>
+    </table>
+</div>
+<br>
+
+[Solution](Exercises/ex_02_25_timus_1209.cpp)
+
+---
+
+### LightOJ 1001
+<div style="text-align: center; margin-bottom: 20px;">
+    <h3>Opposite Task</h3>
+    <p><strong>Time limit:</strong> 1.0 second</p>
+    <p><strong>Memory limit:</strong> 64 MB</p>
+</div>
+
+<div>
+    <p>This problem gives you a flavor of the concept of a special judge. That means the judge is smart enough to verify your code even though it may print different results. In this problem, you are asked to find the opposite task of the previous problem.</p>
+    <p>To be specific, I have two computers where I stored my problems. Now I know the total number of problems is <strong>n</strong>. There are no duplicate problems, and there can be at most <strong>10</strong> problems in each computer. You have to find the number of problems on each of the computers.</p>
+    <p>Since there can be multiple solutions. Any valid solution will do.</p>
+    <h4>Input</h4>
+    <p>Input starts with an integer <em>T (≤ 25)</em>, denoting the number of test cases.</p>
+    <p>Each case starts with a line containing an integer <em>n (0 ≤ n ≤ 20)</em> denoting the total number of problems.</p>
+    <h4>Output</h4>
+    <p>For each case, print the number of problems stored in each computer in a single line. A single space should separate the non-negative integers.</p>
+    <h4>Sample</h4>
+    <table style="width: 100%; border-collapse: collapse; margin: 0 auto;">
+        <tr>
+            <th style="border: 1px solid gray; padding: 8px; text-align: center;">Input</th>
+            <th style="border: 1px solid gray; padding: 8px; text-align: center;">Output</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid gray; padding: 8px;">
+                <p>3</p> 
+                <p>10</p> 
+                <p>7</p> 
+                <p>7</p> 
+            </td>
+            <td style="border: 1px solid gray; padding: 8px;">
+                <p>0 10</p>
+                <p>0 7</p>
+                <p>1 6</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+    </table>
+</div>
+<br>
+
+[Solution](Exercises/ex_02_26_lightoj_1001.cpp)
+
+---
+
+### LightOJ 1008
+<div style="text-align: center; margin-bottom: 20px;">
+    <h3>Fibsieve's Fantabulous Birthday</h3>
+    <p><strong>Time limit:</strong> 1.0 second</p>
+    <p><strong>Memory limit:</strong> 64 MB</p>
+</div>
+
+<div>
+    <p>Fibsieve had a fantabulous (yes, it's an actual word) birthday party this year. He had so many gifts that he was actually thinking of not having a party next year. Among these gifts there was an N x N glass chessboard that had a light in each of its cells. When the board was turned on a distinct cell would light up every second, and then go dark.</p>
+    <p>The cells would light up in the sequence shown in the diagram. Each cell is marked with the second in which it would light up.</p>
+    <table style="width: 100%; border-collapse: collapse; margin: 0 auto;">
+    <tr>
+        <td style="border: 1px solid gray; padding: 8px; text-align: center;">25</td>
+        <td style="border: 1px solid gray; padding: 8px; text-align: center;">24</td>
+        <td style="border: 1px solid gray; padding: 8px; text-align: center;">23</td>
+        <td style="border: 1px solid gray; padding: 8px; text-align: center;">22</td>
+        <td style="border: 1px solid gray; padding: 8px; text-align: center;">21</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid gray; padding: 8px; text-align: center;">10</td>
+        <td style="border: 1px solid gray; padding: 8px; text-align: center;">11</td>
+        <td style="border: 1px solid gray; padding: 8px; text-align: center;">12</td>
+        <td style="border: 1px solid gray; padding: 8px; text-align: center;">13</td>
+        <td style="border: 1px solid gray; padding: 8px; text-align: center;">20</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid gray; padding: 8px; text-align: center;">9</td>
+        <td style="border: 1px solid gray; padding: 8px; text-align: center;">8</td>
+        <td style="border: 1px solid gray; padding: 8px; text-align: center;">7</td>
+        <td style="border: 1px solid gray; padding: 8px; text-align: center;">14</td>
+        <td style="border: 1px solid gray; padding: 8px; text-align: center;">19</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid gray; padding: 8px; text-align: center;">2</td>
+        <td style="border: 1px solid gray; padding: 8px; text-align: center;">3</td>
+        <td style="border: 1px solid gray; padding: 8px; text-align: center;">6</td>
+        <td style="border: 1px solid gray; padding: 8px; text-align: center;">15</td>
+        <td style="border: 1px solid gray; padding: 8px; text-align: center;">18</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid gray; padding: 8px; text-align: center;">1</td>
+        <td style="border: 1px solid gray; padding: 8px; text-align: center;">4</td>
+        <td style="border: 1px solid gray; padding: 8px; text-align: center;">5</td>
+        <td style="border: 1px solid gray; padding: 8px; text-align: center;">16</td>
+        <td style="border: 1px solid gray; padding: 8px; text-align: center;">17</td>
+    </tr>
+</table>
+    <p>In the first second the light at cell (1, 1) would be on. And in the 5th second the cell (3, 1) would be on. Now, Fibsieve is trying to predict which cell will light up at a certain time (given in seconds). Assume that <strong>N</strong> is large enough.</p>
+    <h4>Input</h4>
+    <p>Input starts with an integer <em>T (≤ 200)</em>, denoting the number of test cases.</p>
+    <p>Each case will contain an integer <em>S (1 ≤ S ≤ 1015)</em> which stands for the time.</p>
+    <h4>Output</h4>
+    <p>For each case you have to print the case number and two numbers (<em>x, y</em>), the column and the row number.</p>
+    <h4>Sample</h4>
+    <table style="width: 100%; border-collapse: collapse; margin: 0 auto;">
+        <tr>
+            <th style="border: 1px solid gray; padding: 8px; text-align: center;">Input</th>
+            <th style="border: 1px solid gray; padding: 8px; text-align: center;">Output</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid gray; padding: 8px;">
+                <p>3</p> 
+                <p>8</p> 
+                <p>20</p> 
+                <p>25</p> 
+            </td>
+            <td style="border: 1px solid gray; padding: 8px;">
+                <p>Case 1: 2 3</p>
+                <p>Case 2: 5 4</p>
+                <p>Case 3: 1 5</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+    </table>
+</div>
+<br>
+
+[Solution](Exercises/ex_02_27_lightoj_1008.cpp)
+
+---
+
+### LightOJ 1010
+<div style="text-align: center; margin-bottom: 20px;">
+    <h3>Knights on a Chessboard</h3>
+    <p><strong>Time limit:</strong> 1.0 second</p>
+    <p><strong>Memory limit:</strong> 64 MB</p>
+</div>
+
+<div>
+    <p>Given an <strong>m x n</strong> chessboard where you want to place chess knights. You have to find the number of maximum knights that can be placed in the chessboard such that no two knights attack each other.</p>
+    <p>Those who are not familiar with chess knights, note that a chess knight can attack <strong>8</strong> positions in the board as shown in the picture.</p>
+    <h4>Input</h4>
+    <p>Input starts with an integer <em>T (≤ 41000)</em>, denoting the number of test cases.</p>
+    <p>Each case contains two integers <em>m, n (1 ≤ m, n ≤ 200)</em>. Here m and n corresponds to the number of rows and the number of columns of the board respectively.</p>
+    <h4>Output</h4>
+    <p>For each case, print the case number and maximum number of knights that can be placed in the board considering the above restrictions.</p>
+    <h4>Sample</h4>
+    <table style="width: 100%; border-collapse: collapse; margin: 0 auto;">
+        <tr>
+            <th style="border: 1px solid gray; padding: 8px; text-align: center;">Input</th>
+            <th style="border: 1px solid gray; padding: 8px; text-align: center;">Output</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid gray; padding: 8px;">
+                <p>3</p> 
+                <p>8 8</p> 
+                <p>3 7</p> 
+                <p>4 10</p> 
+            </td>
+            <td style="border: 1px solid gray; padding: 8px;">
+                <p>Case 1: 32</p>
+                <p>Case 2: 11</p>
+                <p>Case 3: 20</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+    </table>
+</div>
+<br>
+
+[Solution](Exercises/ex_02_28_lightoj_1010.cpp)
+
+---
+
+### LightOJ 1015
+<div style="text-align: center; margin-bottom: 20px;">
+    <h3>Brush (I)</h3>
+    <p><strong>Time limit:</strong> 1.0 second</p>
+    <p><strong>Memory limit:</strong> 64 MB</p>
+</div>
+
+<div>
+    <p>Sometimes I feel angry to arrange contests, as I am too lazy. Today I am arranging a contest for the AIUB students. So, I made a plan to share some anger with them. While they will be busy with the contest, I will cover their rooms with dusts. And after the contest, they will surely get angry because they would have to clean up quite a bit.</p>
+    <p>So, at first, I will have to fix the amount of dusts for each student. This amount may not be the same for everyone. Now you are given the amount of dust unit for each student, you have to help me find the total dust unit I have to collect to cause them some pain.</p>
+    <p>But there is a problem, my random function which generates dust units for students has a bug, it sometimes returns negative numbers. If a student gets a negative number, I think he/she is lucky, the lucky person will have no dusts.</p>
+    <h4>Input</h4>
+    <p>Input starts with an integer <em>T (≤ 100)</em>, denoting the number of test cases.</p>
+    <p>Each case starts with a blank line. The next line contains an integer <em>N (1 ≤ N ≤ 1000)</em>, means that there are <em>N</em> students. The next line will contain <em>N</em> integers separated by spaces which denote the dust unit for all students. The dust unit for any student will not contain more than two digits.</p>
+    <h4>Output</h4>
+    <p>For each case print the case number and the total required dust units.</p>
+    <h4>Sample</h4>
+    <table style="width: 100%; border-collapse: collapse; margin: 0 auto;">
+        <tr>
+            <th style="border: 1px solid gray; padding: 8px; text-align: center;">Input</th>
+            <th style="border: 1px solid gray; padding: 8px; text-align: center;">Output</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid gray; padding: 8px;">
+                <p>2</p> 
+                <p>&nbsp;</p> 
+                <p>3</p> 
+                <p>1 5 10</p> 
+                <p>&nbsp;</p> 
+                <p>2</p> 
+                <p>1 99</p> 
+            </td>
+            <td style="border: 1px solid gray; padding: 8px;">
+                <p>Case 1: 16</p> 
+                <p>Case 2: 100</p> 
+                <p>&nbsp;</p> 
+                <p>&nbsp;</p>
+                <p>&nbsp;</p> 
+                <p>&nbsp;</p>
+                <p>&nbsp;</p> 
+            </td>
+        </tr>
+    </table>
+</div>
+<br>
+
+[Solution](Exercises/ex_02_29_lightoj_1015.cpp)
+
+---
+
+### LightOJ 1022
+<div style="text-align: center; margin-bottom: 20px;">
+    <h3>Circle in Square</h3>
+    <p><strong>Time limit:</strong> 1.0 second</p>
+    <p><strong>Memory limit:</strong> 64 MB</p>
+</div>
+
+<div>
+    <p>A circle is placed perfectly into a square. The term perfectly placed means that each side of the square is touched by the circle, but the circle doesn't have any overlapping part with the square.</p>
+    <p>Now you are given the radius of the circle. You have to find the area of the shaded region (blue part). Assume that <strong>pi = 2 * acos (0.0) (acos means cos inverse)</strong>.</p>
+    <h4>Input</h4>
+    <p>Input starts with an integer <em>T (≤ 1000)</em>, denoting the number of test cases.</p>
+    <p>Each case contains a floating point number <em>r (0 < r ≤ 1000)</em> denoting the radius of the circle. And you can assume that <em>r</em> contains at most four digits after the decimal point.</p>
+    <h4>Output</h4>
+    <p>For each case, print the case number and the shaded area rounded to two places after the decimal point.</p>
+    <h4>Sample</h4>
+    <table style="width: 100%; border-collapse: collapse; margin: 0 auto;">
+        <tr>
+            <th style="border: 1px solid gray; padding: 8px; text-align: center;">Input</th>
+            <th style="border: 1px solid gray; padding: 8px; text-align: center;">Output</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid gray; padding: 8px;">
+                <p>3</p> 
+                <p>20</p> 
+                <p>30.091</p> 
+                <p>87.0921</p> 
+            </td>
+            <td style="border: 1px solid gray; padding: 8px;">
+                <p>Case 1: 343.36</p> 
+                <p>Case 2: 777.26</p> 
+                <p>Case 3: 6511.05</p> 
+                <p>&nbsp;</p> 
+            </td>
+        </tr>
+    </table>
+</div>
+<br>
+
+[Solution](Exercises/ex_02_30_lightoj_1022.cpp)
+
+---
+
+### LightOJ 1053
+<div style="text-align: center; margin-bottom: 20px;">
+    <h3>Higher Math</h3>
+    <p><strong>Time limit:</strong> 1.0 second</p>
+    <p><strong>Memory limit:</strong> 64 MB</p>
+</div>
+
+<div>
+    <p>You are building a house. You'd prefer if all the walls have a precise right angle relative to the ground, but you have no device to measure angles. A friend that says he has a great idea how you could ensure that all walls are upright: All you need to do is step away a few feet from the wall, measure how far away you are from the wall, measure the height of the wall, and the distance from the upper edge of the wall to where you stand. You friend tells you to do these measurements for all walls, then he'll tell you how to proceed. Sadly, just as you are done, a timber falls on your friend, and an ambulance brings him to the hospital. This is too bad, because now you have to figure out what to do with your measurements yourself.</p>
+    <p>Given the three sides of a triangle, determine if the triangle is a right triangle, i.e. if one of the triangle's angles is <strong>90</strong> degrees.</p>
+    <h4>Input</h4>
+    <p>Input starts with an integer <em>T (≤ 200)</em>, denoting the number of test cases.</p>
+    <p>Each test case consists of three integers <em>1 ≤ a, b, c ≤ 40000</em> separated by a space. The three integers are the lengths of the sides of a triangle.</p>
+    <h4>Output</h4>
+    <p>For each case, print the case number and <strong>yes</strong> or <strong>no</strong> depending on whether it's a right angle or not.</p>
+    <h4>Sample</h4>
+    <table style="width: 100%; border-collapse: collapse; margin: 0 auto;">
+        <tr>
+            <th style="border: 1px solid gray; padding: 8px; text-align: center;">Input</th>
+            <th style="border: 1px solid gray; padding: 8px; text-align: center;">Output</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid gray; padding: 8px;">
+                <p>2</p> 
+                <p>36 77 85</p> 
+                <p>40 55 69</p> 
+            </td>
+            <td style="border: 1px solid gray; padding: 8px;">
+                <p>Case 1: yes</p> 
+                <p>Case 2: no</p> 
+                <p>&nbsp;</p> 
+            </td>
+        </tr>
+    </table>
+</div>
+<br>
+
+[Solution](Exercises/ex_02_31_lightoj_1053.cpp)
+
+---
+
+### LightOJ 1069
+<div style="text-align: center; margin-bottom: 20px;">
+    <h3>Lift</h3>
+    <p><strong>Time limit:</strong> 1.0 second</p>
+    <p><strong>Memory limit:</strong> 64 MB</p>
+</div>
+
+<div>
+    <p>All of you must have noticed that the lift of AIUB is not available for students. But since you deny obeying usual rules, you always use this lift no matter what happens!</p>
+    <p>Now one day you were sleeping in the class and when you woke up you found none in the department except the guard who was in a deep sleep in his room. But luckily you found the lift on. So, you want to go to the ground floor using the lift. But the lift can be in a different floor. Then you must wait for the lift to come to your floor. Assume that it takes 4 seconds for the lift to go from any floor to its adjacent floor (up or down). It takes 3 seconds to open or close the door and you need 5 seconds to enter or exit the lift. Given your position and the lift's position you have to calculate the time for you to reach the ground floor (floor 0). Reaching ground floor means you must get out of the lift in ground floor.</p>
+    <h4>Input</h4>
+    <p>Input starts with an integer <em>T (≤ 25)</em>, denoting the number of test cases.</p>
+    <p>Each case contains two integers. The first integer means your position (different than 0) and the second integer means the position of the lift. Assume that the department has <strong>100</strong> floors (may be one day it will be :D).</p>
+    <h4>Output</h4>
+    <p>For each case, print the case number and the calculated time in seconds.</p>
+    <h4>Sample</h4>
+    <table style="width: 100%; border-collapse: collapse; margin: 0 auto;">
+        <tr>
+            <th style="border: 1px solid gray; padding: 8px; text-align: center;">Input</th>
+            <th style="border: 1px solid gray; padding: 8px; text-align: center;">Output</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid gray; padding: 8px;">
+                <p>3</p> 
+                <p>1 2</p> 
+                <p>3 10</p> 
+                <p>5 5</p> 
+            </td>
+            <td style="border: 1px solid gray; padding: 8px;">
+                <p>Case 1: 27</p> 
+                <p>Case 2: 59</p> 
+                <p>Case 3: 39</p> 
+                <p>&nbsp;</p> 
+            </td>
+        </tr>
+    </table>
+</div>
+<br>
+
+[Solution](Exercises/ex_02_32_lightoj_1069.cpp)
+
+---
+
+### LightOJ 1072
+<div style="text-align: center; margin-bottom: 20px;">
+    <h3>Calm Down</h3>
+    <p><strong>Time limit:</strong> 1.0 second</p>
+    <p><strong>Memory limit:</strong> 64 MB</p>
+</div>
+
+<div>
+    <p>George B. wants to be more than just a good American. He wants to make his daddy proud and become a hero. You know, like Shakib Khan.</p>
+    <p>But sneaky as he is, he wants a special revolver that will allow him to shoot more often than just the usual six times. This way he can fool and kill the enemy easily (at least that's what he thinks, and that's the best he can think). George has kidnapped . . . uh, I mean . . ."invited" you and will only let you go if you help him with the math.</p>
+    <p>There is a large circle with radius <strong>R</strong> and <strong>n</strong> little circles each having radius <strong>r</strong>, are placed inside on the border of the large circle. George wants his bullets to be as large as possible, so there should be no space between the circles. George will decide how large the whole revolver will be and how many bullets it shall contain. Your job is, given <strong>R</strong> and <strong>n</strong>, to compute <strong>r</strong>. You have decided to help, because you know that he can't make a revolver even if you help him with the math.</p>
+    <h4>Input</h4>
+    <p>Input starts with an integer <em>T (≤ 125)</em>, denoting the number of test cases.</p>
+    <p>Each case contains a real number <em>R (0 < R < 1000)</em> and contains up to at most two places after the decimal point and an integer <em>n (2 ≤ n ≤ 100)</em>.</p>
+    <h4>Output</h4>
+    <p>For each test case, print the case number and <strong>r</strong> in a single line. Errors less than 10<sup>-6</sup> will be ignored.</p>
+    <h4>Sample</h4>
+    <table style="width: 100%; border-collapse: collapse; margin: 0 auto;">
+        <tr>
+            <th style="border: 1px solid gray; padding: 8px; text-align: center;">Input</th>
+            <th style="border: 1px solid gray; padding: 8px; text-align: center;">Output</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid gray; padding: 8px;">
+                <p>4</p> 
+                <p>4.0 6</p> 
+                <p>4.0 17</p> 
+                <p>3.14 100</p> 
+                <p>42 2</p> 
+            </td>
+            <td style="border: 1px solid gray; padding: 8px;">
+                <p>Case 1: 1.3333333333</p> 
+                <p>Case 2: 0.6209067545</p> 
+                <p>Case 3: 0.0956260953</p> 
+                <p>Case 4: 21</p> 
+                <p>&nbsp;</p> 
+            </td>
+        </tr>
+    </table>
+</div>
+<br>
+
+[Solution](Exercises/ex_02_33_lightoj_1072.cpp)
 
 ---
